@@ -1,0 +1,12 @@
+.container {
+  width: 1200px;
+}
+.portrait {
+  display: inline-block;
+  width: 233px;
+  height: 233px;
+  border: 1px solid #3d6cb0;
+  border-radius: 50%;
+  background-color: #3d6cb0;
+  box-shadow: 0 0 0 13px #fff inset;
+}
