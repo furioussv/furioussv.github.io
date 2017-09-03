@@ -1,14 +1,64 @@
 base-color = #3d6cb0
 
-.container
-    width: 1200px
-
-.portrait
+.icon
     display inline-block
-    width: 233px
-    height: 233px
-    border: 1px solid base-color
-    border-radius: 50%
-    background-color: base-color
-    box-shadow: 0 0 0 13px white inset
+    vertical-align middle
+    margin-right 10px
+    width 72px
+    height 72px
+    border 1px solid base-color
+    border-radius 50%
+    background-color base-color
+    box-shadow 0 0 0 3px white inset
+    &::before
+        content ''
+        display block
+        width 47px
+        height 54px
+        background url('images/sprite.png') no-repeat
+        margin 15px auto
+    &-profile::before
+        background-position-x -235px
+    &-contact::before
+        background-position-x -188px
+    &-skills::before
+        background-position-x -141px
+    &-education::before
+        background-position-x -47px
+    &-expirience::before
+        background-position-x -94px
+    &-software::before
+        background-position-x 0
 
+h2.title
+        display inline-block
+        text-transform uppercase
+        color base-color
+
+.container
+    width 1200px
+    margin 0 auto
+
+.logo
+    text-align center
+    .portrait
+        display inline-block
+        width 233px
+        height 233px
+        border 1px solid base-color
+        border-radius 50%
+        background-color base-color
+        box-shadow 0 0 0 13px white inset
+
+.logo,
+.profile,
+.contact,
+.skills
+    float left
+    width 450px
+
+.education,
+.expirience,
+.software
+    float right
+    width 650px

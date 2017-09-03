@@ -1,7 +1,53 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 72px;
+  height: 72px;
+  border: 1px solid #3d6cb0;
+  border-radius: 50%;
+  background-color: #3d6cb0;
+  box-shadow: 0 0 0 3px #fff inset;
+}
+.icon::before {
+  content: '';
+  display: block;
+  width: 47px;
+  height: 54px;
+  background: url(../images/sprite.png) no-repeat;
+  margin: 15px auto;
+}
+.icon-profile::before {
+  background-position-x: -235px;
+}
+.icon-contact::before {
+  background-position-x: -188px;
+}
+.icon-skills::before {
+  background-position-x: -141px;
+}
+.icon-education::before {
+  background-position-x: -47px;
+}
+.icon-expirience::before {
+  background-position-x: -94px;
+}
+.icon-software::before {
+  background-position-x: 0;
+}
+h2.title {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #3d6cb0;
+}
 .container {
   width: 1200px;
+  margin: 0 auto;
 }
-.portrait {
+.logo {
+  text-align: center;
+}
+.logo .portrait {
   display: inline-block;
   width: 233px;
   height: 233px;
@@ -9,4 +55,17 @@
   border-radius: 50%;
   background-color: #3d6cb0;
   box-shadow: 0 0 0 13px #fff inset;
+}
+.logo,
+.profile,
+.contact,
+.skills {
+  float: left;
+  width: 450px;
+}
+.education,
+.expirience,
+.software {
+  float: right;
+  width: 650px;
 }
