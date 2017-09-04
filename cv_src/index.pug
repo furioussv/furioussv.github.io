@@ -1,3 +1,13 @@
+mixin dots(name, progress)
+    - var n = 0;
+    span= name
+        .wrap
+            while n++ < 12
+                if n <= progress
+                    span.dot.active
+                else
+                    span.dot
+
 doctype html
 html(lang="en")
     head
@@ -5,127 +15,129 @@ html(lang="en")
         title Curriculum Vitae
     body
         .container
-            .logo
-                .portrait
-                h2 name here
-                h1 surname
-                h3 graphic designer
-            .education
-                .title-block
-                    .icon.icon-education
-                    h2.title education
-                dl
-                    dt master degree // Feb 2011 - Jun 2014
-                    <br/> university name
-                        dd
-                            |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                            |Aenean commodo ligula eget dolor. Aenean massa.
-                            |Cum sociis natoque penatibus et magnis dis parturient montes,
-                            |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-                    dt master degree // Feb 2011 - Jun 2014
-                    <br/> university name
-                        dd
-                            |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                            |Aenean commodo ligula eget dolor. Aenean massa.
-                            |Cum sociis natoque penatibus et magnis dis parturient montes,
-                            |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-                    dt master degree // Feb 2011 - Jun 2014
-                    <br/> university name
-                        dd
-                            |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                            |Aenean commodo ligula eget dolor. Aenean massa.
-                            |Cum sociis natoque penatibus et magnis dis parturient montes,
-                            |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-                    dt master degree // Feb 2011 - Jun 2014
-                    <br/> university name
-                        dd
-                            |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                            |Aenean commodo ligula eget dolor. Aenean massa.
-                            |Cum sociis natoque penatibus et magnis dis parturient montes,
-                            |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-            .profile
-                .title-block
-                    .icon.icon-profile
-                    h2.title profile
-                p
-                    |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    |Aenean commodo ligula eget dolor. Aenean massa.
-                    |Cum sociis natoque penatibus et magnis dis parturient montes,
-                    |nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                    |pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                    |Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                    |In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-                    |Nullam dictum felis  <b>eu pede mollis pretium. Integer tincidunt.
-                    |Cras dapibus. Vivamus elementum semper nisi.
-                    |Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
-                    |consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
-                    |viverra quis, feugiat a, tellus.
-                    |Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.</b>
-            .expirience
-                .title-block
-                    .icon.icon-expirience
-                    h2.title expirience
-                dl
-                    dt company name // Feb 2011 - Jun 2014
-                    <br/> your job here
-                        dd
-                            |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                            |Aenean commodo ligula eget dolor. Aenean massa.
-                            |Cum sociis natoque penatibus et magnis dis parturient montes,
-                            |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-                    dt company name // Feb 2011 - Jun 2014
-                    <br/> your job here
-                        dd
-                            |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                            |Aenean commodo ligula eget dolor. Aenean massa.
-                            |Cum sociis natoque penatibus et magnis dis parturient montes,
-                            |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-                    dt company name // Feb 2011 - Jun 2014
-                    <br/> your job here
-                        dd
-                            |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                            |Aenean commodo ligula eget dolor. Aenean massa.
-                            |Cum sociis natoque penatibus et magnis dis parturient montes,
-                            |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-                    dt comapany name // Feb 2011 - Jun 2014
-                    <br/> your job here
-                        dd
-                            |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                            |Aenean commodo ligula eget dolor. Aenean massa.
-                            |Cum sociis natoque penatibus et magnis dis parturient montes,
-                            |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-            .contact
-                .title-block
-                    .icon.icon-contact
-                    h2.title contact
-                table
-                    tr
-                        td adress
-                        td Main street, City.
-                    tr
-                        td e-mail
-                        td contact@domain.com
-                    tr
-                        td phone
-                        td 555-555-555
-                    tr
-                        td website
-                        td www.yourweb.com
-            .skills
-                .title-block
-                    .icon.icon-skills
-                    h2.title skills
-                h3 creative
-                h3 teamwork
-                h3 innovate
-                h3 communacation
-            .software
-                .title-block
-                    .icon.icon-software
-                    h2.title software
-                h3 photoshop
-                h3 illustrator
-                h3 indesign
-                h3 dreamweaver
-                h3 after effects
-                h3 html&amp;css3
+            .left-column
+                .logo
+                    .portrait
+                    h2 name here
+                    h1 surname
+                    h3 graphic designer
+                .profile
+                    .title-block
+                        .icon.icon-profile
+                        h2.title profile
+                    p
+                        |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        |Aenean commodo ligula eget dolor. Aenean massa.
+                        |Cum sociis natoque penatibus et magnis dis parturient montes,
+                        |nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                        |pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                        |Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                        |In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+                        |Nullam dictum felis  <b>eu pede mollis pretium. Integer tincidunt.
+                        |Cras dapibus. Vivamus elementum semper nisi.
+                        |Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+                        |consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+                        |viverra quis, feugiat a, tellus.
+                        |Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.</b>
+                .contact
+                    .title-block
+                        .icon.icon-contact
+                        h2.title contact
+                    table
+                        tr
+                            td address
+                            td Main Street, City.
+                        tr
+                            td e-mail
+                            td contact@domain.com
+                        tr
+                            td phone
+                            td 555-555-555
+                        tr
+                            td website
+                            td www.yourweb.com
+                .skills
+                    .title-block
+                        .icon.icon-skills
+                        h2.title skills
+                    +dots('creative', 9)
+                    +dots('teamwork', 11)
+                    +dots('innovate', 6)
+                    +dots('communication', 11)
+            .right-column
+                .education
+                    .title-block
+                        .icon.icon-education
+                        h2.title education
+                    dl
+                        dt master degree // Feb 2011 - Jun 2014
+                        <br/> university name
+                            dd
+                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                |Aenean commodo ligula eget dolor. Aenean massa.
+                                |Cum sociis natoque penatibus et magnis dis parturient montes,
+                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                        dt master degree // Feb 2011 - Jun 2014
+                        <br/> university name
+                            dd
+                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                |Aenean commodo ligula eget dolor. Aenean massa.
+                                |Cum sociis natoque penatibus et magnis dis parturient montes,
+                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                        dt master degree // Feb 2011 - Jun 2014
+                        <br/> university name
+                            dd
+                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                |Aenean commodo ligula eget dolor. Aenean massa.
+                                |Cum sociis natoque penatibus et magnis dis parturient montes,
+                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                        dt master degree // Feb 2011 - Jun 2014
+                        <br/> university name
+                            dd
+                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                |Aenean commodo ligula eget dolor. Aenean massa.
+                                |Cum sociis natoque penatibus et magnis dis parturient montes,
+                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                .expirience
+                    .title-block
+                        .icon.icon-expirience
+                        h2.title expirience
+                    dl
+                        dt company name // Feb 2011 - Jun 2014
+                        <br/> your job here
+                            dd
+                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                |Aenean commodo ligula eget dolor. Aenean massa.
+                                |Cum sociis natoque penatibus et magnis dis parturient montes,
+                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                        dt company name // Feb 2011 - Jun 2014
+                        <br/> your job here
+                            dd
+                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                |Aenean commodo ligula eget dolor. Aenean massa.
+                                |Cum sociis natoque penatibus et magnis dis parturient montes,
+                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                        dt company name // Feb 2011 - Jun 2014
+                        <br/> your job here
+                            dd
+                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                |Aenean commodo ligula eget dolor. Aenean massa.
+                                |Cum sociis natoque penatibus et magnis dis parturient montes,
+                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                        dt comapany name // Feb 2011 - Jun 2014
+                        <br/> your job here
+                            dd
+                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                |Aenean commodo ligula eget dolor. Aenean massa.
+                                |Cum sociis natoque penatibus et magnis dis parturient montes,
+                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                .software
+                    .title-block
+                        .icon.icon-software
+                        h2.title software
+                    h3 photoshop
+                    h3 illustrator
+                    h3 indesign
+                    h3 dreamweaver
+                    h3 after effects
+                    h3 html&amp;css3

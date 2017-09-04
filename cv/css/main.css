@@ -1,13 +1,80 @@
-.icon {
+@font-face {
+	font-family: "MyriadProRegular";
+	src: url(fonts/MyriadProRegular.eot);
+	src: url(fonts/MyriadProRegular.eot?#iefix)format("embedded-opentype"),
+	url(fonts/MyriadProRegular.woff) format("woff"),
+	url(fonts/MyriadProRegular.ttf) format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "MyriadProBold";
+	src: url(fonts/MyriadProBold.eot);
+	src: url(fonts/MyriadProBold.eot?#iefix)format("embedded-opentype"),
+	url(fonts/MyriadProBold.woff) format("woff"),
+	url(fonts/MyriadProBold.ttf) format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "MyriadProItalic";
+	src: url(fonts/MyriadProItalic.eot);
+	src: url(fonts/MyriadProItalic.eot?#iefix)format("embedded-opentype"),
+	url(fonts/MyriadProItalic.woff) format("woff"),
+	url(fonts/MyriadProItalic.ttf) format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "MyriadProSemiBold";
+	src: url(fonts/MyriadProSemiBold.eot);
+	src: url(fonts/MyriadProSemiBold.eot?#iefix)format("embedded-opentype"),
+	url(fonts/MyriadProSemiBold.woff) format("woff"),
+	url(fonts/MyriadProSemiBold.ttf) format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "MyriadProBoldItalic";
+	src: url(fonts/MyriadProBoldItalic.eot);
+	src: url(fonts/MyriadProBoldItalic.eot?#iefix)format("embedded-opentype"),
+	url(fonts/MyriadProBoldItalic.woff) format("woff"),
+	url(fonts/MyriadProBoldItalic.ttf) format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "MyriadProSemiBoldItalic";
+	src: url(fonts/MyriadProSemiBoldItalic.eot);
+	src: url(fonts/MyriadProSemiBoldItalic.eot?#iefix)format("embedded-opentype"),
+	url(fonts/MyriadProSemiBoldItalic.woff) format("woff"),
+	url(fonts/MyriadProSemiBoldItalic.ttf) format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "MyriadProLightSemiExt";
+	src: url(fonts/MyriadProLightSemiExt.eot);
+	src: url(fonts/MyriadProLightSemiExt.eot?#iefix)format("embedded-opentype"),
+	url(fonts/MyriadProLightSemiExt.woff) format("woff"),
+	url(fonts/MyriadProLightSemiExt.ttf) format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}.icon {
   display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-  width: 72px;
-  height: 72px;
+  margin-right: 8px;
+  width: 70px;
+  height: 70px;
   border: 1px solid #3d6cb0;
   border-radius: 50%;
   background-color: #3d6cb0;
-  box-shadow: 0 0 0 3px #fff inset;
+  box-shadow: 0 0 0 2px #fff inset;
 }
 .icon::before {
   content: '';
@@ -39,33 +106,119 @@ h2.title {
   display: inline-block;
   text-transform: uppercase;
   color: #3d6cb0;
+  font-family: 'MyriadProBold';
+  font-size: 41px;
+  margin: 0;
+  padding-top: 8px;
+  vertical-align: top;
 }
 .container {
-  width: 1200px;
+  width: 1240px;
   margin: 0 auto;
+}
+.left-column {
+  margin-left: 44px;
+  float: left;
+  width: 411px;
+}
+.right-column {
+  float: right;
+  width: 632px;
+  margin-right: 64px;
 }
 .logo {
   text-align: center;
+  margin-top: 80px;
+  margin-left: 38px;
 }
 .logo .portrait {
   display: inline-block;
-  width: 233px;
-  height: 233px;
-  border: 1px solid #3d6cb0;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
+  border: 1px solid #3d6cb0;
   background-color: #3d6cb0;
   box-shadow: 0 0 0 13px #fff inset;
 }
-.logo,
-.profile,
-.contact,
-.skills {
-  float: left;
-  width: 450px;
+.logo h1 {
+  font-family: 'MyriadProBold';
+  font-size: 62px;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: -20px;
 }
-.education,
-.expirience,
-.software {
-  float: right;
-  width: 650px;
+.logo h2 {
+  font-family: 'MyriadProLightSemiExt';
+  font-size: 53px;
+  font-weight: normal;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 21px;
+}
+.logo h3 {
+  font-family: 'MyriadProBold';
+  font-size: 24px;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+}
+.profile {
+  margin-top: 76px;
+  margin-left: 10px;
+}
+.profile p {
+  font-family: 'MyriadProRegular';
+  font-size: 15px;
+  margin: 0;
+  margin-top: 8px;
+  padding-right: 10px;
+  word-spacing: 1px;
+  line-height: 19px;
+}
+.contact {
+  margin-top: 21px;
+  margin-left: 10px;
+}
+.contact table {
+  margin: 0;
+  padding: 0;
+  margin-left: -29px;
+  border-spacing: 27px;
+}
+.contact table tr td:first-child {
+  font-family: 'MyriadProBold';
+  font-size: 20px;
+  color: #3d6cb0;
+  text-transform: uppercase;
+}
+.contact table tr td:last-child {
+  font-family: 'MyriadProRegular';
+  font-size: 20px;
+  padding-left: 15px;
+}
+.skills {
+  margin-top: 21px;
+  margin-left: 8px;
+}
+.skills > span {
+  display: block;
+  text-align: center;
+  font-family: 'MyriadProRegular';
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-left: 16px;
+  margin-top: 16px;
+}
+.skills > span span.dot {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #e6e6e6;
+  margin-right: 10px;
+}
+.skills > span span.dot.active {
+  background-color: #3d6cb0;
 }

@@ -1,15 +1,15 @@
 base-color = #3d6cb0
+accent-color = #e6e6e6
 
 .icon
     display inline-block
-    vertical-align middle
-    margin-right 10px
-    width 72px
-    height 72px
+    margin-right 8px
+    width 70px
+    height 70px
     border 1px solid base-color
     border-radius 50%
     background-color base-color
-    box-shadow 0 0 0 3px white inset
+    box-shadow 0 0 0 2px white inset
     &::before
         content ''
         display block
@@ -34,31 +34,109 @@ h2.title
         display inline-block
         text-transform uppercase
         color base-color
+        font-family 'MyriadProBold'
+        font-size 41px
+        margin 0
+        padding-top 8px
+        vertical-align top
 
 .container
-    width 1200px
+    width 1240px
     margin 0 auto
+
+.left-column
+    margin-left 44px
+    float left
+    width 411px
+
+.right-column
+    float right
+    width 632px
+    margin-right 64px
+
 
 .logo
     text-align center
+    margin-top 80px
+    margin-left 38px
     .portrait
         display inline-block
-        width 233px
-        height 233px
-        border 1px solid base-color
+        width 230px
+        height 230px
         border-radius 50%
+        border 1px solid base-color
         background-color base-color
         box-shadow 0 0 0 13px white inset
+    h1
+        font-family 'MyriadProBold'
+        font-size 62px
+        color black
+        text-transform uppercase
+        margin 0
+        margin-top -20px
+    h2
+        font-family 'MyriadProLightSemiExt'
+        font-size 53px
+        font-weight normal
+        color black
+        text-transform uppercase
+        margin 0
+        margin-top 21px
+    h3
+        font-family 'MyriadProBold'
+        font-size 24px
+        color black
+        text-transform uppercase
+        margin 0
 
-.logo,
-.profile,
-.contact,
+.profile
+    margin-top 76px
+    margin-left 10px
+    p
+       font-family 'MyriadProRegular'
+       font-size 15px
+       margin 0
+       margin-top 8px
+       padding-right 10px
+       word-spacing 1px
+       line-height 19px
+
+.contact
+    margin-top 21px
+    margin-left 10px
+    table
+        margin 0
+        padding 0
+        margin-left -29px
+        border-spacing 27px
+        tr
+            td:first-child
+                font-family 'MyriadProBold'
+                font-size 20px
+                color base-color
+                text-transform uppercase
+            td:last-child
+                font-family 'MyriadProRegular'
+                font-size 20px
+                padding-left 15px
+
 .skills
-    float left
-    width 450px
-
-.education,
-.expirience,
-.software
-    float right
-    width 650px
+    margin-top 21px
+    margin-left 8px
+    > span
+        display block
+        text-align center
+        font-family 'MyriadProRegular'
+        font-size 26px
+        text-transform uppercase
+        margin-left 16px
+        margin-top 16px
+        span.dot
+            display inline-block
+            width 17px
+            height 17px
+            border-radius 50%
+            background-color accent-color
+            margin-right 10px
+            &.active
+                background-color base-color

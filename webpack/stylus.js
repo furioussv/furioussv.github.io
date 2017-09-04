@@ -3,14 +3,15 @@ module.exports = function(paths) {
         module: {
             rules: [
                 {
-                    test: /\.styl$/,
-                    include: paths,
-                    use: [
-                        'style-loader',
-                        'css-loader',
-                        'stylus-loader'
-                    ]
-                }
+					test: /\.styl$/,
+					include: paths,
+					loaders: 'style-loader!css-loader!stylus-loader',
+				},
+                {
+					test: /\.css$/,
+					include: paths,
+					loaders: 'style-loader!css-loader',
+				}
             ]
         }
     };

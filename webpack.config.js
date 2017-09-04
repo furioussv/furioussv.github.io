@@ -7,6 +7,7 @@ const extractCSS = require('./webpack/css.extract');
 const devserver = require('./webpack/devserver');
 const webpack = require('webpack');
 const images = require('./webpack/images');
+const fonts = require('./webpack/fonts');
 
 const PATHS = {
     source: path.join(__dirname, 'cv_src'),
@@ -27,7 +28,8 @@ const common = merge ([
         ],
     },
     pug(),
-    images()
+    images(),
+    fonts()
 ]);
 
 module.exports = function(env) {
