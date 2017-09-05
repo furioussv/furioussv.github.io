@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --env development",
     "build": "webpack --env production",
-    "serv": "static sv"
+    "serv": "static cv"
   },
   "author": "",
   "license": "ISC",

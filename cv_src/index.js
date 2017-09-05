@@ -1,2 +1,2 @@
-import './styles/fonts.css';
+import './styles/fonts.styl';
 import './styles/styles.styl';

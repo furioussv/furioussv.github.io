@@ -1,72 +1,53 @@
 @font-face {
-	font-family: "MyriadProRegular";
-	src: url(fonts/MyriadProRegular.eot);
-	src: url(fonts/MyriadProRegular.eot?#iefix)format("embedded-opentype"),
-	url(fonts/MyriadProRegular.woff) format("woff"),
-	url(fonts/MyriadProRegular.ttf) format("truetype");
-	font-style: normal;
-	font-weight: normal;
+  font-family: "MyriadProRegular";
+  src: url(../fonts/MyriadProRegular.eot);
+  src: url(../fonts/MyriadProRegular.eot?#iefix) format("embedded-opentype"), url(../fonts/MyriadProRegular.woff) format("woff"), url(../fonts/MyriadProRegular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
-
 @font-face {
-	font-family: "MyriadProBold";
-	src: url(fonts/MyriadProBold.eot);
-	src: url(fonts/MyriadProBold.eot?#iefix)format("embedded-opentype"),
-	url(fonts/MyriadProBold.woff) format("woff"),
-	url(fonts/MyriadProBold.ttf) format("truetype");
-	font-style: normal;
-	font-weight: normal;
+  font-family: "MyriadProBold";
+  src: url(../fonts/MyriadProBold.eot);
+  src: url(../fonts/MyriadProBold.eot?#iefix) format("embedded-opentype"), url(../fonts/MyriadProBold.woff) format("woff"), url(../fonts/MyriadProBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
-
 @font-face {
-	font-family: "MyriadProItalic";
-	src: url(fonts/MyriadProItalic.eot);
-	src: url(fonts/MyriadProItalic.eot?#iefix)format("embedded-opentype"),
-	url(fonts/MyriadProItalic.woff) format("woff"),
-	url(fonts/MyriadProItalic.ttf) format("truetype");
-	font-style: normal;
-	font-weight: normal;
+  font-family: "MyriadProItalic";
+  src: url(../fonts/MyriadProItalic.eot);
+  src: url(../fonts/MyriadProItalic.eot?#iefix) format("embedded-opentype"), url(../fonts/MyriadProItalic.woff) format("woff"), url(../fonts/MyriadProItalic.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
-
 @font-face {
-	font-family: "MyriadProSemiBold";
-	src: url(fonts/MyriadProSemiBold.eot);
-	src: url(fonts/MyriadProSemiBold.eot?#iefix)format("embedded-opentype"),
-	url(fonts/MyriadProSemiBold.woff) format("woff"),
-	url(fonts/MyriadProSemiBold.ttf) format("truetype");
-	font-style: normal;
-	font-weight: normal;
+  font-family: "MyriadProSemiBold";
+  src: url(../fonts/MyriadProSemiBold.eot);
+  src: url(../fonts/MyriadProSemiBold.eot?#iefix) format("embedded-opentype"), url(../fonts/MyriadProSemiBold.woff) format("woff"), url(../fonts/MyriadProSemiBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
-
 @font-face {
-	font-family: "MyriadProBoldItalic";
-	src: url(fonts/MyriadProBoldItalic.eot);
-	src: url(fonts/MyriadProBoldItalic.eot?#iefix)format("embedded-opentype"),
-	url(fonts/MyriadProBoldItalic.woff) format("woff"),
-	url(fonts/MyriadProBoldItalic.ttf) format("truetype");
-	font-style: normal;
-	font-weight: normal;
+  font-family: "MyriadProBoldItalic";
+  src: url(../fonts/MyriadProBoldItalic.eot);
+  src: url(../fonts/MyriadProBoldItalic.eot?#iefix) format("embedded-opentype"), url(../fonts/MyriadProBoldItalic.woff) format("woff"), url(../fonts/MyriadProBoldItalic.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
-
 @font-face {
-	font-family: "MyriadProSemiBoldItalic";
-	src: url(fonts/MyriadProSemiBoldItalic.eot);
-	src: url(fonts/MyriadProSemiBoldItalic.eot?#iefix)format("embedded-opentype"),
-	url(fonts/MyriadProSemiBoldItalic.woff) format("woff"),
-	url(fonts/MyriadProSemiBoldItalic.ttf) format("truetype");
-	font-style: normal;
-	font-weight: normal;
+  font-family: "MyriadProSemiBoldItalic";
+  src: url(../fonts/MyriadProSemiBoldItalic.eot);
+  src: url(../fonts/MyriadProSemiBoldItalic.eot?#iefix) format("embedded-opentype"), url(../fonts/MyriadProSemiBoldItalic.woff) format("woff"), url(../fonts/MyriadProSemiBoldItalic.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
-
 @font-face {
-	font-family: "MyriadProLightSemiExt";
-	src: url(fonts/MyriadProLightSemiExt.eot);
-	src: url(fonts/MyriadProLightSemiExt.eot?#iefix)format("embedded-opentype"),
-	url(fonts/MyriadProLightSemiExt.woff) format("woff"),
-	url(fonts/MyriadProLightSemiExt.ttf) format("truetype");
-	font-style: normal;
-	font-weight: normal;
-}.icon {
+  font-family: "MyriadProLightSemiExt";
+  src: url(../fonts/MyriadProLightSemiExt.eot);
+  src: url(../fonts/MyriadProLightSemiExt.eot?#iefix) format("embedded-opentype"), url(../fonts/MyriadProLightSemiExt.woff) format("woff"), url(../fonts/MyriadProLightSemiExt.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.icon {
   display: inline-block;
   margin-right: 8px;
   width: 70px;
@@ -199,7 +180,7 @@ h2.title {
   padding-left: 15px;
 }
 .skills {
-  margin-top: 21px;
+  margin-top: 20px;
   margin-left: 8px;
 }
 .skills > span {
@@ -209,7 +190,7 @@ h2.title {
   font-size: 26px;
   text-transform: uppercase;
   margin-left: 16px;
-  margin-top: 16px;
+  margin-top: 17px;
 }
 .skills > span span.dot {
   display: inline-block;
@@ -221,4 +202,26 @@ h2.title {
 }
 .skills > span span.dot.active {
   background-color: #3d6cb0;
+}
+.skills > span span.dot:first-child {
+  margin-left: 5px;
+}
+.skills > span span.dot:nth-child(4n),
+.skills > span span.dot:nth-child(11) {
+  margin-right: 11px;
+}
+.skills > span span.dot:nth-child(5n) {
+  margin-right: 12px;
+}
+.skills > span:nth-of-type(2) {
+  margin-top: 12px;
+}
+.skills > span:nth-of-type(3) {
+  margin-top: 13px;
+}
+.skills > span:last-of-type {
+  margin-top: 13px;
+}
+.skills > span:last-of-type .wrap {
+  margin-top: -3px;
 }
