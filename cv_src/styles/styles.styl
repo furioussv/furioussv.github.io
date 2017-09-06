@@ -3,7 +3,7 @@ accent-color = #e6e6e6
 
 .icon
     display inline-block
-    margin-right 8px
+    margin-right 7px
     width 70px
     height 70px
     border 1px solid base-color
@@ -149,9 +149,61 @@ h2.title
                 margin-right 12px
         &:nth-of-type(2)
             margin-top 12px
+            .wrap
+                margin-top 1px
         &:nth-of-type(3)
             margin-top 13px
+            .wrap
+                margin-top -1px
         &:last-of-type
             margin-top 13px
             .wrap
                 margin-top -3px
+
+.education
+    margin-top 68px
+    .icon
+        margin-right 16px
+    .title
+        padding-top 7px
+    .wrap
+        position relative
+        margin-left 50px
+        margin-top 19px
+        &-item
+            font-size 16px
+            font-family 'MyriadProRegular'
+            span
+                &:first-of-type
+                    font-family 'MyriadProBold'
+                    font-size 26px
+                    color base-color
+                    text-transform uppercase
+                &:nth-of-type(2)
+                    font-size 26px
+                &:nth-of-type(3)
+                    font-size 26px
+                    text-transform uppercase
+        &::before
+            content ''
+            position absolute
+            top 9px
+            left -39px
+            display inline-block
+            width 20px
+            height 20px
+            border-radius 50%
+            background-color black
+            margin-right 21px
+        &:nth-child(3)
+            margin-top 16px
+        &:nth-child(4)
+            margin-top 14px
+        &:nth-child(5)
+            margin-top 13px
+
+.expirience
+    margin-top 58px
+    .icon
+        width 72px
+        height 72px

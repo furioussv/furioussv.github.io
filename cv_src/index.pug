@@ -69,35 +69,16 @@ html(lang="en")
                     .title-block
                         .icon.icon-education
                         h2.title education
-                    dl
-                        dt master degree // Feb 2011 - Jun 2014
-                        <br/> university name
-                            dd
-                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                |Aenean commodo ligula eget dolor. Aenean massa.
-                                |Cum sociis natoque penatibus et magnis dis parturient montes,
-                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-                        dt master degree // Feb 2011 - Jun 2014
-                        <br/> university name
-                            dd
-                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                |Aenean commodo ligula eget dolor. Aenean massa.
-                                |Cum sociis natoque penatibus et magnis dis parturient montes,
-                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-                        dt master degree // Feb 2011 - Jun 2014
-                        <br/> university name
-                            dd
-                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                |Aenean commodo ligula eget dolor. Aenean massa.
-                                |Cum sociis natoque penatibus et magnis dis parturient montes,
-                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-                        dt master degree // Feb 2011 - Jun 2014
-                        <br/> university name
-                            dd
-                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                |Aenean commodo ligula eget dolor. Aenean massa.
-                                |Cum sociis natoque penatibus et magnis dis parturient montes,
-                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                    - var n = 0;
+                    while n++ < 4
+                        .wrap
+                            .wrap-item= ''
+                                span= 'master degree'
+                                span= '// Feb 2011 - Jun 2014'
+                                br/= ''
+                                span= 'university name'
+                                br/= ''
+                                span= 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes,nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
                 .expirience
                     .title-block
                         .icon.icon-expirience
