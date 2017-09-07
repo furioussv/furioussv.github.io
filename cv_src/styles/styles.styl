@@ -1,36 +1,51 @@
 base-color = #3d6cb0
 accent-color = #e6e6e6
 
-.icon
-    display inline-block
-    margin-right 7px
-    width 70px
-    height 70px
-    border 1px solid base-color
-    border-radius 50%
-    background-color base-color
-    box-shadow 0 0 0 2px white inset
-    &::before
+.title-block
+    position relative
+    &::after
         content ''
+        position absolute
         display block
-        width 47px
-        height 54px
-        background url('../images/sprite.png') no-repeat
-        margin 15px auto
-    &-profile::before
-        background-position-x -235px
-    &-contact::before
-        background-position-x -188px
-    &-skills::before
-        background-position-x -141px
-    &-education::before
-        background-position-x -47px
-    &-expirience::before
-        background-position-x -94px
-    &-software::before
-        background-position-x 0
-
-h2.title
+        width 100%
+        height 5px
+        top 50%
+        background-color base-color
+        z-index -10
+    .wrapper
+        position relative
+        display inline-block
+        background-color white
+        z-index 10
+    .icon
+        display inline-block
+        margin-right 7px
+        width 70px
+        height 70px
+        border 1px solid base-color
+        border-radius 50%
+        background-color base-color
+        box-shadow 0 0 0 2px white inset
+        &::before
+            content ''
+            display block
+            width 47px
+            height 54px
+            background url('../images/sprite.png') no-repeat
+            margin 15px auto
+        &-profile::before
+            background-position-x -235px
+        &-contact::before
+            background-position-x -188px
+        &-skills::before
+            background-position-x -141px
+        &-education::before
+            background-position-x -47px
+        &-experience::before
+            background-position-x -94px
+        &-software::before
+            background-position-x 0
+    h2.title
         display inline-block
         text-transform uppercase
         color base-color
@@ -43,22 +58,29 @@ h2.title
 .container
     width 1240px
     margin 0 auto
+    @media screen and (max-width: 1240px)
+        width 680px
 
 .left-column
-    margin-left 44px
     float left
-    width 411px
+    width 420px
+    margin-left 44px
 
 .right-column
     float right
-    width 632px
-    margin-right 64px
+    width 650px
+    margin-right 46px
 
+.left-column,
+.right-column
+    @media screen and (max-width: 1240px)
+        float none
+        margin 0 auto
 
 .logo
     text-align center
     margin-top 80px
-    margin-left 38px
+    margin-left 30px
     .portrait
         display inline-block
         width 230px
@@ -102,7 +124,7 @@ h2.title
        line-height 19px
 
 .contact
-    margin-top 21px
+    margin-top 40px
     margin-left 10px
     table
         margin 0
@@ -122,6 +144,7 @@ h2.title
 
 .skills
     margin-top 20px
+    margin-bottom 89px
     margin-left 8px
     > span
         display block
@@ -129,7 +152,7 @@ h2.title
         font-family 'MyriadProRegular'
         font-size 26px
         text-transform uppercase
-        margin-left 16px
+        margin-left 7px
         margin-top 17px
         span.dot
             display inline-block
@@ -171,6 +194,7 @@ h2.title
         margin-left 50px
         margin-top 19px
         &-item
+            display inline-block
             font-size 16px
             font-family 'MyriadProRegular'
             span
@@ -180,10 +204,16 @@ h2.title
                     color base-color
                     text-transform uppercase
                 &:nth-of-type(2)
+                    display inline-block
+                    margin-left 13px
                     font-size 26px
                 &:nth-of-type(3)
                     font-size 26px
                     text-transform uppercase
+                &:last-of-type
+                    display inline-block
+                    margin-top 6px
+                    margin-left 3px
         &::before
             content ''
             position absolute
@@ -196,14 +226,97 @@ h2.title
             background-color black
             margin-right 21px
         &:nth-child(3)
-            margin-top 16px
+            margin-top 10px
         &:nth-child(4)
-            margin-top 14px
+            margin-top 8px
         &:nth-child(5)
-            margin-top 13px
+            margin-top 7px
 
-.expirience
-    margin-top 58px
+.experience
+    margin-top 52px
     .icon
         width 72px
         height 72px
+    .title
+        margin-left 7px
+        margin-top 2px
+    .wrap
+        position relative
+        margin-left 50px
+        margin-top 34px
+        &-item
+            display inline-block
+            font-size 16px
+            font-family 'MyriadProRegular'
+            span
+                &:first-of-type
+                    font-family 'MyriadProBold'
+                    font-size 26px
+                    text-transform uppercase
+                &:nth-of-type(2)
+                    display inline-block
+                    margin-left 13px
+                    font-size 26px
+                &:nth-of-type(3)
+                    font-size 26px
+                    text-transform uppercase
+                &:last-of-type
+                    display inline-block
+                    margin-top 6px
+                    margin-left 3px
+        &::before
+            content ''
+            position absolute
+            top 9px
+            left -39px
+            display inline-block
+            width 20px
+            height 20px
+            border-radius 50%
+            background-color black
+            margin-right 21px
+        &:nth-child(3)
+            margin-top 8px
+        &:nth-child(4)
+            margin-top 10px
+
+.software
+    margin-top 50px
+    .title
+        margin-left 9px
+        margin-top 3px
+    .progress
+        &-item
+            display inline-block
+            width 277px
+            margin-left 7px
+            margin-top 21px
+            .progress-title
+                margin-left -1px
+            &:nth-child(2n+3)
+                margin-left 64px
+                .progress-title
+                    margin-left 2px
+            &:nth-child(4),
+            &:nth-child(5)
+                margin-top 35px
+            &:nth-child(6),
+            &:nth-child(7)
+                margin-top 32px
+            .progressbar
+                position relative
+                width 277px
+                height 22px
+                background-color #e6e6e6
+                .progress
+                    position absolute
+                    left 0
+                    top 0
+                    height 100%
+                    background-color base-color
+
+        &-title
+            font-family 'MyriadProRegular'
+            font-size 26px
+            text-transform uppercase
+

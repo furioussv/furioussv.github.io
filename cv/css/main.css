@@ -47,7 +47,26 @@
   font-style: normal;
   font-weight: normal;
 }
-.icon {
+.title-block {
+  position: relative;
+}
+.title-block::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 5px;
+  top: 50%;
+  background-color: #3d6cb0;
+  z-index: -10;
+}
+.title-block .wrapper {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  z-index: 10;
+}
+.title-block .icon {
   display: inline-block;
   margin-right: 7px;
   width: 70px;
@@ -57,7 +76,7 @@
   background-color: #3d6cb0;
   box-shadow: 0 0 0 2px #fff inset;
 }
-.icon::before {
+.title-block .icon::before {
   content: '';
   display: block;
   width: 47px;
@@ -65,25 +84,25 @@
   background: url(../images/sprite.png) no-repeat;
   margin: 15px auto;
 }
-.icon-profile::before {
+.title-block .icon-profile::before {
   background-position-x: -235px;
 }
-.icon-contact::before {
+.title-block .icon-contact::before {
   background-position-x: -188px;
 }
-.icon-skills::before {
+.title-block .icon-skills::before {
   background-position-x: -141px;
 }
-.icon-education::before {
+.title-block .icon-education::before {
   background-position-x: -47px;
 }
-.icon-expirience::before {
+.title-block .icon-experience::before {
   background-position-x: -94px;
 }
-.icon-software::before {
+.title-block .icon-software::before {
   background-position-x: 0;
 }
-h2.title {
+.title-block h2.title {
   display: inline-block;
   text-transform: uppercase;
   color: #3d6cb0;
@@ -97,20 +116,32 @@ h2.title {
   width: 1240px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1240px) {
+  .container {
+    width: 680px;
+  }
+}
 .left-column {
-  margin-left: 44px;
   float: left;
-  width: 411px;
+  width: 420px;
+  margin-left: 44px;
 }
 .right-column {
   float: right;
-  width: 632px;
-  margin-right: 64px;
+  width: 650px;
+  margin-right: 46px;
+}
+@media screen and (max-width: 1240px) {
+  .left-column,
+  .right-column {
+    float: none;
+    margin: 0 auto;
+  }
 }
 .logo {
   text-align: center;
   margin-top: 80px;
-  margin-left: 38px;
+  margin-left: 30px;
 }
 .logo .portrait {
   display: inline-block;
@@ -159,7 +190,7 @@ h2.title {
   line-height: 19px;
 }
 .contact {
-  margin-top: 21px;
+  margin-top: 40px;
   margin-left: 10px;
 }
 .contact table {
@@ -181,6 +212,7 @@ h2.title {
 }
 .skills {
   margin-top: 20px;
+  margin-bottom: 89px;
   margin-left: 8px;
 }
 .skills > span {
@@ -189,7 +221,7 @@ h2.title {
   font-family: 'MyriadProRegular';
   font-size: 26px;
   text-transform: uppercase;
-  margin-left: 16px;
+  margin-left: 7px;
   margin-top: 17px;
 }
 .skills > span span.dot {
@@ -246,6 +278,7 @@ h2.title {
   margin-top: 19px;
 }
 .education .wrap-item {
+  display: inline-block;
   font-size: 16px;
   font-family: 'MyriadProRegular';
 }
@@ -256,11 +289,18 @@ h2.title {
   text-transform: uppercase;
 }
 .education .wrap-item span:nth-of-type(2) {
+  display: inline-block;
+  margin-left: 13px;
   font-size: 26px;
 }
 .education .wrap-item span:nth-of-type(3) {
   font-size: 26px;
   text-transform: uppercase;
+}
+.education .wrap-item span:last-of-type {
+  display: inline-block;
+  margin-top: 6px;
+  margin-left: 3px;
 }
 .education .wrap::before {
   content: '';
@@ -275,18 +315,117 @@ h2.title {
   margin-right: 21px;
 }
 .education .wrap:nth-child(3) {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 .education .wrap:nth-child(4) {
-  margin-top: 14px;
+  margin-top: 8px;
 }
 .education .wrap:nth-child(5) {
-  margin-top: 13px;
+  margin-top: 7px;
 }
-.expirience {
-  margin-top: 58px;
+.experience {
+  margin-top: 52px;
 }
-.expirience .icon {
+.experience .icon {
   width: 72px;
   height: 72px;
+}
+.experience .title {
+  margin-left: 7px;
+  margin-top: 2px;
+}
+.experience .wrap {
+  position: relative;
+  margin-left: 50px;
+  margin-top: 34px;
+}
+.experience .wrap-item {
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'MyriadProRegular';
+}
+.experience .wrap-item span:first-of-type {
+  font-family: 'MyriadProBold';
+  font-size: 26px;
+  text-transform: uppercase;
+}
+.experience .wrap-item span:nth-of-type(2) {
+  display: inline-block;
+  margin-left: 13px;
+  font-size: 26px;
+}
+.experience .wrap-item span:nth-of-type(3) {
+  font-size: 26px;
+  text-transform: uppercase;
+}
+.experience .wrap-item span:last-of-type {
+  display: inline-block;
+  margin-top: 6px;
+  margin-left: 3px;
+}
+.experience .wrap::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: -39px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #000;
+  margin-right: 21px;
+}
+.experience .wrap:nth-child(3) {
+  margin-top: 8px;
+}
+.experience .wrap:nth-child(4) {
+  margin-top: 10px;
+}
+.software {
+  margin-top: 50px;
+}
+.software .title {
+  margin-left: 9px;
+  margin-top: 3px;
+}
+.software .progress-item {
+  display: inline-block;
+  width: 277px;
+  margin-left: 7px;
+  margin-top: 21px;
+}
+.software .progress-item .progress-title {
+  margin-left: -1px;
+}
+.software .progress-item:nth-child(2n+3) {
+  margin-left: 64px;
+}
+.software .progress-item:nth-child(2n+3) .progress-title {
+  margin-left: 2px;
+}
+.software .progress-item:nth-child(4),
+.software .progress-item:nth-child(5) {
+  margin-top: 35px;
+}
+.software .progress-item:nth-child(6),
+.software .progress-item:nth-child(7) {
+  margin-top: 32px;
+}
+.software .progress-item .progressbar {
+  position: relative;
+  width: 277px;
+  height: 22px;
+  background-color: #e6e6e6;
+}
+.software .progress-item .progressbar .progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #3d6cb0;
+}
+.software .progress-title {
+  font-family: 'MyriadProRegular';
+  font-size: 26px;
+  text-transform: uppercase;
 }

@@ -8,6 +8,18 @@ mixin dots(name, progress)
                 else
                     span.dot
 
+mixin progressbar(name, progress)
+    .progress-item
+        span.progress-title= name
+        .progressbar
+            .progress(style="width:"+progress+"px")
+
+mixin title(name)
+    .title-block
+        .wrapper
+            .icon(class="icon-"+name)
+            h2.title= name
+
 doctype html
 html(lang="en")
     head
@@ -22,9 +34,7 @@ html(lang="en")
                     h1 surname
                     h3 graphic designer
                 .profile
-                    .title-block
-                        .icon.icon-profile
-                        h2.title profile
+                    +title('profile')
                     p
                         |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                         |Aenean commodo ligula eget dolor. Aenean massa.
@@ -40,9 +50,7 @@ html(lang="en")
                         |viverra quis, feugiat a, tellus.
                         |Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.</b>
                 .contact
-                    .title-block
-                        .icon.icon-contact
-                        h2.title contact
+                    +title('contact')
                     table
                         tr
                             td address
@@ -57,18 +65,14 @@ html(lang="en")
                             td website
                             td www.yourweb.com
                 .skills
-                    .title-block
-                        .icon.icon-skills
-                        h2.title skills
+                    +title('skills')
                     +dots('creative', 9)
                     +dots('teamwork', 11)
                     +dots('innovate', 6)
                     +dots('communication', 11)
             .right-column
                 .education
-                    .title-block
-                        .icon.icon-education
-                        h2.title education
+                    +title('education')
                     - var n = 0;
                     while n++ < 4
                         .wrap
@@ -79,46 +83,23 @@ html(lang="en")
                                 span= 'university name'
                                 br/= ''
                                 span= 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes,nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
-                .expirience
-                    .title-block
-                        .icon.icon-expirience
-                        h2.title expirience
-                    dl
-                        dt company name // Feb 2011 - Jun 2014
-                        <br/> your job here
-                            dd
-                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                |Aenean commodo ligula eget dolor. Aenean massa.
-                                |Cum sociis natoque penatibus et magnis dis parturient montes,
-                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-                        dt company name // Feb 2011 - Jun 2014
-                        <br/> your job here
-                            dd
-                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                |Aenean commodo ligula eget dolor. Aenean massa.
-                                |Cum sociis natoque penatibus et magnis dis parturient montes,
-                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-                        dt company name // Feb 2011 - Jun 2014
-                        <br/> your job here
-                            dd
-                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                |Aenean commodo ligula eget dolor. Aenean massa.
-                                |Cum sociis natoque penatibus et magnis dis parturient montes,
-                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
-                        dt comapany name // Feb 2011 - Jun 2014
-                        <br/> your job here
-                            dd
-                                |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                |Aenean commodo ligula eget dolor. Aenean massa.
-                                |Cum sociis natoque penatibus et magnis dis parturient montes,
-                                |nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
+                .experience
+                    +title('experience')
+                    - var n = 0;
+                    while n++ < 3
+                        .wrap
+                            .wrap-item= ''
+                                span= 'company name'
+                                span= '// Feb 2011 - Jun 2014'
+                                br/= ''
+                                span= 'your job here'
+                                br/= ''
+                                span= 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes,nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
                 .software
-                    .title-block
-                        .icon.icon-software
-                        h2.title software
-                    h3 photoshop
-                    h3 illustrator
-                    h3 indesign
-                    h3 dreamweaver
-                    h3 after effects
-                    h3 html&amp;css3
+                    +title('software')
+                    +progressbar('photoshop', 252)
+                    +progressbar('dreamweaver', 230)
+                    +progressbar('illustrator', 195)
+                    +progressbar('after effects', 170)
+                    +progressbar('indesign', 156)
+                    +progressbar('html&css3', 252)
