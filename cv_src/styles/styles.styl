@@ -1,6 +1,34 @@
 base-color = #3d6cb0
 accent-color = #e6e6e6
 
+.container
+    width 1240px
+    margin 0 auto
+    @media screen and (max-width: 1240px)
+        width 680px
+
+.left-column
+    float left
+    width 410px
+    margin-left 56px
+
+.right-column
+    float right
+    width 630px
+    margin-right 66px
+
+.clearfix::after
+    content ''
+    display table
+    clear both
+
+.left-column,
+.right-column
+    @media screen and (max-width: 1240px)
+        float none
+        margin 0 auto
+        width 630px
+
 .title-block
     position relative
     &::after
@@ -12,12 +40,21 @@ accent-color = #e6e6e6
         top 50%
         background-color base-color
         z-index -10
-    .wrapper
+    .title-wrapper
         position relative
         display inline-block
         background-color white
         z-index 10
-    .icon
+    .title
+        display inline-block
+        text-transform uppercase
+        color base-color
+        font-family 'MyriadProBold'
+        font-size 41px
+        margin 0
+        padding-top 8px
+        vertical-align top
+    .icon-title
         display inline-block
         margin-right 7px
         width 70px
@@ -33,54 +70,24 @@ accent-color = #e6e6e6
             height 54px
             background url('../images/sprite.png') no-repeat
             margin 15px auto
-        &-profile::before
-            background-position-x -235px
-        &-contact::before
-            background-position-x -188px
-        &-skills::before
-            background-position-x -141px
-        &-education::before
-            background-position-x -47px
-        &-experience::before
-            background-position-x -94px
-        &-software::before
-            background-position-x 0
-    h2.title
-        display inline-block
-        text-transform uppercase
-        color base-color
-        font-family 'MyriadProBold'
-        font-size 41px
-        margin 0
-        padding-top 8px
-        vertical-align top
+    .icon-profile::before
+        background-position-x -235px
+    .icon-contact::before
+        background-position-x -188px
+    .icon-skills::before
+        background-position-x -141px
+    .icon-education::before
+        background-position-x -47px
+    .icon-experience::before
+        background-position-x -94px
+    .icon-software::before
+        background-position-x 0
 
-.container
-    width 1240px
-    margin 0 auto
-    @media screen and (max-width: 1240px)
-        width 680px
-
-.left-column
-    float left
-    width 420px
-    margin-left 44px
-
-.right-column
-    float right
-    width 650px
-    margin-right 46px
-
-.left-column,
-.right-column
-    @media screen and (max-width: 1240px)
-        float none
-        margin 0 auto
 
 .logo
     text-align center
     margin-top 80px
-    margin-left 30px
+    margin-left 15px
     .portrait
         display inline-block
         width 230px
@@ -89,32 +96,34 @@ accent-color = #e6e6e6
         border 1px solid base-color
         background-color base-color
         box-shadow 0 0 0 13px white inset
-    h1
-        font-family 'MyriadProBold'
-        font-size 62px
-        color black
-        text-transform uppercase
-        margin 0
-        margin-top -20px
-    h2
-        font-family 'MyriadProLightSemiExt'
-        font-size 53px
-        font-weight normal
-        color black
-        text-transform uppercase
-        margin 0
-        margin-top 21px
-    h3
-        font-family 'MyriadProBold'
-        font-size 24px
-        color black
-        text-transform uppercase
-        margin 0
+        &-surname,
+        &-name,
+        &-profession
+            color black
+            text-transform uppercase
+            margin 0
+        &-surname
+            font-family 'MyriadProBold'
+            font-size 62px
+            margin-top -20px
+        &-name
+            font-family 'MyriadProLightSemiExt'
+            font-size 53px
+            font-weight normal
+            margin-top 22px
+        &-profession
+            font-family 'MyriadProBold'
+            font-size 24px
+            margin-top -1px
 
 .profile
     margin-top 76px
-    margin-left 10px
-    p
+    margin-left -2px
+    .title
+        margin-right 8px
+    .title-block::after
+        transform translateY(-5px)
+    &-vita
        font-family 'MyriadProRegular'
        font-size 15px
        margin 0
@@ -125,36 +134,44 @@ accent-color = #e6e6e6
 
 .contact
     margin-top 40px
-    margin-left 10px
-    table
+    margin-left -2px
+    .title
+        margin-right 8px
+    .title-block::after
+        transform translateY(-5px)
+    .contact-table
         margin 0
         padding 0
         margin-left -29px
         border-spacing 27px
-        tr
-            td:first-child
-                font-family 'MyriadProBold'
-                font-size 20px
-                color base-color
-                text-transform uppercase
-            td:last-child
-                font-family 'MyriadProRegular'
-                font-size 20px
-                padding-left 15px
+    .table-topic
+        font-family 'MyriadProBold'
+        font-size 20px
+        color base-color
+        text-transform uppercase
+    .table-value
+        font-family 'MyriadProRegular'
+        font-size 20px
+        padding-left 15px
 
 .skills
     margin-top 20px
     margin-bottom 89px
-    margin-left 8px
-    > span
+    margin-left -4px
+    .title
+        margin-right 13px
+    .title-block
+        margin-right 2px
+        &::after
+            transform translateY(-6px)
+    .skill
         display block
         text-align center
         font-family 'MyriadProRegular'
         font-size 26px
         text-transform uppercase
-        margin-left 7px
-        margin-top 17px
-        span.dot
+        margin-left 6px
+        .dot
             display inline-block
             width 17px
             height 17px
@@ -170,50 +187,41 @@ accent-color = #e6e6e6
                 margin-right 11px
             &:nth-child(5n)
                 margin-right 12px
-        &:nth-of-type(2)
-            margin-top 12px
-            .wrap
+        &-creative
+            margin-top 16px
+            .dots-wrapper
                 margin-top 1px
-        &:nth-of-type(3)
+        &-teamwork
             margin-top 13px
-            .wrap
-                margin-top -1px
-        &:last-of-type
+        &-innovate
+            margin-top 12px
+        &-communication
             margin-top 13px
-            .wrap
+            .dots-wrapper
                 margin-top -3px
 
-.education
-    margin-top 68px
-    .icon
-        margin-right 16px
-    .title
-        padding-top 7px
-    .wrap
-        position relative
-        margin-left 50px
-        margin-top 19px
-        &-item
+.education,
+.experience
+    &-item
+        display inline-block
+        font-size 16px
+        font-family 'MyriadProRegular'
+        .head
+            font-family 'MyriadProBold'
+            font-size 26px
+            color base-color
+            text-transform uppercase
+        .date
             display inline-block
-            font-size 16px
-            font-family 'MyriadProRegular'
-            span
-                &:first-of-type
-                    font-family 'MyriadProBold'
-                    font-size 26px
-                    color base-color
-                    text-transform uppercase
-                &:nth-of-type(2)
-                    display inline-block
-                    margin-left 13px
-                    font-size 26px
-                &:nth-of-type(3)
-                    font-size 26px
-                    text-transform uppercase
-                &:last-of-type
-                    display inline-block
-                    margin-top 6px
-                    margin-left 3px
+            margin-left 13px
+            font-size 26px
+        .name
+            font-size 26px
+            text-transform uppercase
+        .explanation
+            display inline-block
+            margin-top 6px
+            margin-left 3px
         &::before
             content ''
             position absolute
@@ -225,6 +233,21 @@ accent-color = #e6e6e6
             border-radius 50%
             background-color black
             margin-right 21px
+
+
+.education
+    margin-top 68px
+    .icon-title
+        margin-right 16px
+    .title
+        padding-top 7px
+        margin-right 9px
+    .title-block::after
+        transform translateY(-6px)
+    &-wrapper
+        position relative
+        margin-left 50px
+        margin-top 19px
         &:nth-child(3)
             margin-top 10px
         &:nth-child(4)
@@ -234,47 +257,25 @@ accent-color = #e6e6e6
 
 .experience
     margin-top 52px
-    .icon
+    .icon-title
         width 72px
         height 72px
+    .head
+        color black
     .title
         margin-left 7px
         margin-top 2px
-    .wrap
+        margin-right 2px
+        &:nth-child(3)
+            margin-top 8px
+        &:nth-child(4)
+            margin-top 10px
+    .title-block::after
+        transform translateY(-5px)
+    &-wrapper
         position relative
         margin-left 50px
         margin-top 34px
-        &-item
-            display inline-block
-            font-size 16px
-            font-family 'MyriadProRegular'
-            span
-                &:first-of-type
-                    font-family 'MyriadProBold'
-                    font-size 26px
-                    text-transform uppercase
-                &:nth-of-type(2)
-                    display inline-block
-                    margin-left 13px
-                    font-size 26px
-                &:nth-of-type(3)
-                    font-size 26px
-                    text-transform uppercase
-                &:last-of-type
-                    display inline-block
-                    margin-top 6px
-                    margin-left 3px
-        &::before
-            content ''
-            position absolute
-            top 9px
-            left -39px
-            display inline-block
-            width 20px
-            height 20px
-            border-radius 50%
-            background-color black
-            margin-right 21px
         &:nth-child(3)
             margin-top 8px
         &:nth-child(4)
@@ -285,36 +286,58 @@ accent-color = #e6e6e6
     .title
         margin-left 9px
         margin-top 3px
+        margin-right 23px
+    .title-block::after
+        transform translateY(-2px)
     .progress
         &-item
             display inline-block
             width 277px
-            margin-left 7px
+            margin-left 6px
             margin-top 21px
             .progress-title
                 margin-left -1px
-            &:nth-child(2n+3)
-                margin-left 64px
-                .progress-title
-                    margin-left 2px
-            &:nth-child(4),
-            &:nth-child(5)
-                margin-top 35px
-            &:nth-child(6),
-            &:nth-child(7)
-                margin-top 32px
             .progressbar
                 position relative
                 width 277px
                 height 22px
                 background-color #e6e6e6
-                .progress
+                .progress-value
                     position absolute
                     left 0
                     top 0
                     height 100%
                     background-color base-color
-
+        &-photoshop .progressbar
+            margin-top 13px
+        &-dreamweaver
+            margin-left 64px
+            .progress-title
+                margin-left 2px
+            .progressbar
+                margin-top 13px
+        &-illustrator .progressbar
+            margin-top 11px
+        &-after
+            margin-left 64px
+            .progress-title
+                margin-left 2px
+            .progressbar
+                margin-top 11px
+        &-indesign .progressbar
+            margin-top 9px
+        &-aftereffects
+            margin-left 64px
+            .progress-title
+                margin-left 2px
+            .progressbar
+                margin-top 11px
+        &-html
+            margin-left 64px
+            .progress-title
+                margin-left 2px
+            .progressbar
+                margin-top 9px
         &-title
             font-family 'MyriadProRegular'
             font-size 26px

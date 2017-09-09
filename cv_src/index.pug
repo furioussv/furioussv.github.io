@@ -1,23 +1,23 @@
 mixin dots(name, progress)
     - var n = 0;
-    span= name
-        .wrap
+    span.skill(class="skill-" + name)= name
+        .dots-wrapper
             while n++ < 12
                 if n <= progress
                     span.dot.active
                 else
                     span.dot
 
-mixin progressbar(name, progress)
-    .progress-item
-        span.progress-title= name
+mixin progressbar(name, title, px)
+    .progress-item(class="progress-" + name)
+        span.progress-title= title
         .progressbar
-            .progress(style="width:"+progress+"px")
+            .progress-value(style="width:" + px + "px")
 
 mixin title(name)
     .title-block
-        .wrapper
-            .icon(class="icon-"+name)
+        .title-wrapper
+            .icon-title(class="icon-" + name)
             h2.title= name
 
 doctype html
@@ -26,16 +26,16 @@ html(lang="en")
         meta(charset="UTF-8")
         title Curriculum Vitae
     body
-        .container
+        .container.clearfix
             .left-column
                 .logo
                     .portrait
-                    h2 name here
-                    h1 surname
-                    h3 graphic designer
+                    h2.portrait-name name here
+                    h1.portrait-surname surname
+                    h3.portrait-profession graphic designer
                 .profile
                     +title('profile')
-                    p
+                    .profile-vita
                         |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                         |Aenean commodo ligula eget dolor. Aenean massa.
                         |Cum sociis natoque penatibus et magnis dis parturient montes,
@@ -51,19 +51,19 @@ html(lang="en")
                         |Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.</b>
                 .contact
                     +title('contact')
-                    table
+                    table.contact-table
                         tr
-                            td address
-                            td Main Street, City.
+                            td.table-topic address
+                            td.table-value Main Street, City.
                         tr
-                            td e-mail
-                            td contact@domain.com
+                            td.table-topic e-mail
+                            td.table-value contact@domain.com
                         tr
-                            td phone
-                            td 555-555-555
+                            td.table-topic phone
+                            td.table-value 555-555-555
                         tr
-                            td website
-                            td www.yourweb.com
+                            td.table-topic website
+                            td.table-value www.yourweb.com
                 .skills
                     +title('skills')
                     +dots('creative', 9)
@@ -75,31 +75,31 @@ html(lang="en")
                     +title('education')
                     - var n = 0;
                     while n++ < 4
-                        .wrap
-                            .wrap-item= ''
-                                span= 'master degree'
-                                span= '// Feb 2011 - Jun 2014'
+                        .education-wrapper
+                            .education-item= ''
+                                span.head= 'master degree'
+                                span.date= '// Feb 2011 - Jun 2014'
                                 br/= ''
-                                span= 'university name'
+                                span.name= 'university name'
                                 br/= ''
-                                span= 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes,nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
+                                span.explanation= 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes,nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
                 .experience
                     +title('experience')
                     - var n = 0;
                     while n++ < 3
-                        .wrap
-                            .wrap-item= ''
-                                span= 'company name'
-                                span= '// Feb 2011 - Jun 2014'
+                        .experience-wrapper
+                            .experience-item= ''
+                                span.head= 'company name'
+                                span.date= '// Feb 2011 - Jun 2014'
                                 br/= ''
-                                span= 'your job here'
+                                span.name= 'your job here'
                                 br/= ''
-                                span= 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes,nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
+                                span.explanation= 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa.Cum sociis natoque penatibus et magnis dis parturient montes,nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
                 .software
                     +title('software')
-                    +progressbar('photoshop', 252)
-                    +progressbar('dreamweaver', 230)
-                    +progressbar('illustrator', 195)
-                    +progressbar('after effects', 170)
-                    +progressbar('indesign', 156)
-                    +progressbar('html&css3', 252)
+                    +progressbar('photoshop', 'photoshop', 252)
+                    +progressbar('dreamweaver', 'dreamweaver', 230)
+                    +progressbar('illustrator', 'illustrator', 195)
+                    +progressbar('aftereffects', 'after effects', 170)
+                    +progressbar('indesign', 'indesign', 156)
+                    +progressbar('html', 'html&css3', 252)
